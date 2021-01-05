@@ -1,0 +1,8 @@
+<p><%= flash[:notice] %></p>
+
+<% @books.each do |book| %>
+  <h3><%= book.name %></h3>
+  <p><%= link_to 'Conheça mais', book_path(book) %> <%= link_to 'Editar livro', edit_book_path(book) %> <%= button_to 'Deletar livro', book_path(book), method: :delete %></p>
+<% end %>
+
+<p><%= link_to 'Criar novo livro', new_book_path %></p>

@@ -1,0 +1,8 @@
+<h1><%= @book.name %></h1>
+<p>Ano de publicação: <%= @book.year_of_publication %></p>
+<p>Autor: <%= @book.author %></p>
+<% @authors.each do |author| %>
+  <% if @book.author == author.name %>
+    <li><%= link_to 'Mais livros desse autor', author_path(author) %></li>
+  <% end %>
+<% end %>

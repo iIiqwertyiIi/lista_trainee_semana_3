@@ -1,0 +1,9 @@
+<h1>Editar livro</h1>
+
+<%= form_for @book do |book| %>
+  <p>Nome: <%= book.text_field :name %></p>
+  <p>Ano de publicação: <%= book.number_field :year_of_publication %></p>
+  <p>Nome do autor: <%= book.text_field :author %></p>
+
+  <%= book.submit %>
+<% end %>

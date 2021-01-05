@@ -1,0 +1,8 @@
+<p><%= flash[:notice] %></p>
+
+<% @authors.each do |author| %>
+  <h3><%= author.name %></h3>
+  <p><%= link_to 'Conheça mais', author_path(author) %> <%= link_to 'Editar autor', edit_author_path(author) %> <%= button_to 'Deletar autor', author_path(author), method: :delete %></p>
+<% end %>
+
+<p><%= link_to 'Criar novo autor', new_author_path %></p>

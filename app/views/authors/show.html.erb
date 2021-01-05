@@ -1,0 +1,8 @@
+<h1><%= @author.name %></h1>
+<p>Ano de Nascimento: <%= @author.year_of_birth %></p>
+<p>País de Origem: <%= @author.birthplace %></p>
+<% @books.each do |book| %>
+  <% if book.author == @author.name %>
+    <li><%= link_to book.name, book_path(book) %></li>
+  <% end %>
+<% end %>

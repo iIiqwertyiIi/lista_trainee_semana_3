@@ -1,0 +1,9 @@
+<h1>Novo Autor</h1>
+
+<%= form_for @author do |author| %>
+  <p>Nome: <%= author.text_field :name %></p>
+  <p>Ano de nascimento: <%= author.number_field :year_of_birth %></p>
+  <p>País de origem: <%= author.text_field :birthplace %></p>
+
+  <%= author.submit %>
+<% end %>
